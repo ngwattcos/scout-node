@@ -15,6 +15,12 @@ app.listen(port, function (err) {
     }
     return console.log("server is listening on " + port);
 });
+app.get("/", function (req, res) {
+    console.log("main page");
+    res.send({
+        msg: "you have gotted this"
+    });
+});
 app.get("/potato", function (req, res) {
     console.log("potato");
     res.send({
